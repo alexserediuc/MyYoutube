@@ -9,30 +9,36 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    lazy var navigationBarView = NavigationBarView()
+    lazy var tabBarView = TabBarView()
+    lazy var videosTableVC = VideosTableVC()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        let safeLayout = view.safeAreaLayoutGuide
         view.backgroundColor = UIColor.systemBackground
+        setConstraints()
         
-        let navigationBarView = NavigationBarView()
+    }
+    
+    private func setConstraints() {
         view.addSubview(navigationBarView)
-        NSLayoutConstraint.activate([
-            navigationBarView.topAnchor.constraint(equalTo: safeLayout.topAnchor),
-            navigationBarView.leftAnchor.constraint(equalTo: safeLayout.leftAnchor),
-            navigationBarView.rightAnchor.constraint(equalTo: safeLayout.rightAnchor),
-            navigationBarView.heightAnchor.constraint(equalToConstant: 50)
-        ])
+        navigationBarView.pin(to: view)
         
-        let tabBarView = TabBarView()
         view.addSubview(tabBarView)
-        NSLayoutConstraint.activate([
-            tabBarView.bottomAnchor.constraint(equalTo: safeLayout.bottomAnchor),
-            tabBarView.leftAnchor.constraint(equalTo: safeLayout.leftAnchor),
-            tabBarView.rightAnchor.constraint(equalTo: safeLayout.rightAnchor),
-            tabBarView.heightAnchor.constraint(equalToConstant: 50)
-        ])
+        tabBarView.pin(to: view)
         
+        setVideosTableVCConstraints()
+    }
+    
+    private func setVideosTableVCConstraints() {
+        addChild(videosTableVC)
+        view.addSubview(videosTableVC.view)
+        NSLayoutConstraint.activate([
+                videosTableVC.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                videosTableVC.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                videosTableVC.view.topAnchor.constraint(equalTo: navigationBarView.bottomAnchor),
+                videosTableVC.view.bottomAnchor.constraint(equalTo: tabBarView.topAnchor)
+            ])
     }
 }
 

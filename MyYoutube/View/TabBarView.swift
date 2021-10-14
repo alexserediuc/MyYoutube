@@ -69,31 +69,49 @@ class TabBarView: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         translatesAutoresizingMaskIntoConstraints = false
-        
         buttons = [homeButton, addButton, libraryButton]
-        
+        setHomeConstraints()
+        setAddConstraints()
+        setLibraryConstraints()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func pin(to superView: UIView) {
+        NSLayoutConstraint.activate([
+            leftAnchor.constraint(equalTo: superView.safeAreaLayoutGuide.leftAnchor),
+            rightAnchor.constraint(equalTo: superView.safeAreaLayoutGuide.rightAnchor),
+            bottomAnchor.constraint(equalTo: superView.safeAreaLayoutGuide.bottomAnchor),
+            heightAnchor.constraint(equalToConstant: 50)
+        ])
+    }
+    
+    private func setHomeConstraints() {
         addSubview(homeButton)
         NSLayoutConstraint.activate([
             homeButton.leftAnchor.constraint(equalTo: leftAnchor, constant: 10),
             homeButton.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
-        
+    }
+    
+    private func setAddConstraints() {
         addSubview(addButton)
         NSLayoutConstraint.activate([
             addButton.centerXAnchor.constraint(equalTo: centerXAnchor),
             addButton.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
-        
+    }
+    
+    private func setLibraryConstraints() {
         addSubview(libraryButton)
         NSLayoutConstraint.activate([
             libraryButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -10),
             libraryButton.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     private func select(button: UIButton) {

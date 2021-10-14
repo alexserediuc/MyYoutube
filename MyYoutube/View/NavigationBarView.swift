@@ -37,7 +37,15 @@ class NavigationBarView: UIView {
         super.init(frame: frame)
         
         translatesAutoresizingMaskIntoConstraints = false
-        
+        setLogoImageConstraints()
+        setProfileButtonConstraints()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setLogoImageConstraints() {
         addSubview(logoImageView)
         NSLayoutConstraint.activate([
             logoImageView.leftAnchor.constraint(equalTo: leftAnchor, constant: 10),
@@ -45,17 +53,22 @@ class NavigationBarView: UIView {
             logoImageView.heightAnchor.constraint(equalTo: heightAnchor),
             logoImageView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.25)
         ])
-        
+    }
+    
+    func pin(to superView: UIView) {
+        NSLayoutConstraint.activate([
+            topAnchor.constraint(equalTo: superView.safeAreaLayoutGuide.topAnchor),
+            leftAnchor.constraint(equalTo: superView.safeAreaLayoutGuide.leftAnchor),
+            rightAnchor.constraint(equalTo: superView.safeAreaLayoutGuide.rightAnchor),
+            heightAnchor.constraint(equalToConstant: 50)
+        ])
+    }
+    
+    private func setProfileButtonConstraints() {
         addSubview(profileButton)
         NSLayoutConstraint.activate([
             profileButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -10),
             profileButton.centerYAnchor.constraint(equalTo: centerYAnchor),
         ])
-        
-}
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
