@@ -11,7 +11,8 @@ import UIKit
 class VideoLauncher {
     
     func launchVideoIn(view: UIView) {
-        let view = UIView()
+        //let view = UIView()
         
         //view.frame = CGRect(
+}
 }

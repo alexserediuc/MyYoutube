@@ -118,6 +118,7 @@ class VideoCell: UITableViewCell {
             thumbnailImageView.topAnchor.constraint(equalTo: topAnchor),
             thumbnailImageView.heightAnchor.constraint(equalTo: widthAnchor, multiplier: 9/16),
         ])
+        
     }
     
     func setFooterContainerConstraints() {
