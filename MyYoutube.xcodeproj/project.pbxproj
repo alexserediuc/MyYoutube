@@ -15,6 +15,9 @@
 		FA2541C72716DD5800FE8628 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2541C62716DD5700FE8628 /* NavigationBarView.swift */; };
 		FA2541CA2716E2D900FE8628 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2541C92716E2D900FE8628 /* TabBarView.swift */; };
 		FA2541CD2716E43700FE8628 /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2541CC2716E43700FE8628 /* NotificationExtension.swift */; };
+		FA2B3A81271E91030090BD22 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B3A80271E91030090BD22 /* PlayerView.swift */; };
+		FA2B3A84271E937E0090BD22 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B3A83271E937E0090BD22 /* TestVC.swift */; };
+		FA4966CF271FFE4E00D4D30E /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4966CE271FFE4E00D4D30E /* VideoView.swift */; };
 		FA69F4722718469E00B84BD3 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69F4712718469E00B84BD3 /* VideoCell.swift */; };
 		FA69F47527184AAA00B84BD3 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69F47427184AAA00B84BD3 /* Video.swift */; };
 		FA69F4782718602B00B84BD3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69F4772718602B00B84BD3 /* User.swift */; };
@@ -33,6 +36,9 @@
 		FA2541C62716DD5700FE8628 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		FA2541C92716E2D900FE8628 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		FA2541CC2716E43700FE8628 /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
+		FA2B3A80271E91030090BD22 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		FA2B3A83271E937E0090BD22 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
+		FA4966CE271FFE4E00D4D30E /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		FA69F4712718469E00B84BD3 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		FA69F47427184AAA00B84BD3 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		FA69F4772718602B00B84BD3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -96,6 +102,8 @@
 				FA2541C92716E2D900FE8628 /* TabBarView.swift */,
 				FA69F4712718469E00B84BD3 /* VideoCell.swift */,
 				FAA1E66427198D630079C66D /* VideoPlayerView.swift */,
+				FA2B3A80271E91030090BD22 /* PlayerView.swift */,
+				FA4966CE271FFE4E00D4D30E /* VideoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -104,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				FA2541B32716C15500FE8628 /* MainViewController.swift */,
+				FA2B3A83271E937E0090BD22 /* TestVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -208,10 +217,13 @@
 				FAA1E66527198D630079C66D /* VideoPlayerView.swift in Sources */,
 				FA2541CD2716E43700FE8628 /* NotificationExtension.swift in Sources */,
 				FA69F47C2718839A00B84BD3 /* VideoLauncher.swift in Sources */,
+				FA2B3A81271E91030090BD22 /* PlayerView.swift in Sources */,
 				FA69F4722718469E00B84BD3 /* VideoCell.swift in Sources */,
 				FA2541B42716C15500FE8628 /* MainViewController.swift in Sources */,
 				FA69F47527184AAA00B84BD3 /* Video.swift in Sources */,
 				FA2541B02716C15500FE8628 /* AppDelegate.swift in Sources */,
+				FA4966CF271FFE4E00D4D30E /* VideoView.swift in Sources */,
+				FA2B3A84271E937E0090BD22 /* TestVC.swift in Sources */,
 				FA2541C72716DD5800FE8628 /* NavigationBarView.swift in Sources */,
 				FA2541CA2716E2D900FE8628 /* TabBarView.swift in Sources */,
 				FA69F4782718602B00B84BD3 /* User.swift in Sources */,

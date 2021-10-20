@@ -139,7 +139,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         NotificationCenter.default.post(name: .closeOtherVideoPlayer, object: nil)
         let startingFrame = CGRect(x: 0, y: view.frame.height, width: view.frame.width, height: 10)
-        videoView = VideoPlayerView(frame: startingFrame)
+        videoView = VideoPlayerView(frame: startingFrame, video: videos[indexPath.row])
         setFullVideoConstraints()
     }
 }

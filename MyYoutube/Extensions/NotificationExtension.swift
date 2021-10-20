@@ -12,4 +12,5 @@ extension Notification.Name {
     static let minimizeVideoPlayer = Notification.Name("minimizeVideoPlayer")
     static let closeVideoPlayer = Notification.Name("closeVideoPlayer")
     static let closeOtherVideoPlayer = Notification.Name("closeOtherVideoPlayer")
+    static let minimize = Notification.Name("minimize")
 }
